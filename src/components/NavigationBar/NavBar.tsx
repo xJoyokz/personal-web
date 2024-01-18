@@ -38,7 +38,7 @@ const NavBar = () => {
               }`}
               onClick={() => handleLinkClick("/journey")}
             >
-              <Tippy delay={0} content="Carrer" className="tippy">
+              <Tippy delay={0} content="Journey" className="tippy">
                 <Link href="/journey" className="link-none">
                   <span className="icon">
                     <i className="fi fi-rr-hiking"></i>
