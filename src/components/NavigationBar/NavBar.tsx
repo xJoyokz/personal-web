@@ -3,38 +3,43 @@
 import { useState } from "react";
 import Link from "next/link";
 import Tippy from "@tippyjs/react";
+import { usePathname } from "next/navigation";
 
 const NavBar = () => {
-  const [activeLink, setActiveLink] = useState(1);
+  const pathname = usePathname();
 
-  const handleLinkClick = (index: any) => {
-    setActiveLink(index);
+  const [activeLink, setActiveLink] = useState(pathname);
+
+  const handleLinkClick = (path: any) => {
+    setActiveLink(path);
   };
 
   return (
     <>
-      <div className="navigationContainer">
+      <div className="navigation-container position-absolute bottom-0 start-0 end-0">
         <div className="navigation">
           <ul>
             <li className="list">
-              <Tippy delay={0} content="Cv" className="tippy">
+              <Tippy delay={0} content="My cv" className="tippy">
                 <Link
                   href={"/pdf/JayaWicaksana.pdf"}
                   target="_blank"
                   className="link-none"
                 >
                   <span className="icon">
-                    <i className="fi fi-rr-envelope-open-text"></i>
+                    <i className="fi fi-rr-document-signed"></i>
                   </span>
                 </Link>
               </Tippy>
             </li>
             <li
-              className={`${"list"} ${activeLink === 0 ? "active" : ""}`}
-              onClick={() => handleLinkClick(0)}
+              className={`${"list"} ${
+                activeLink === "/journey" ? "active" : ""
+              }`}
+              onClick={() => handleLinkClick("/journey")}
             >
-              <Tippy delay={0} content="Experience" className="tippy">
-                <Link href="/" className="link-none">
+              <Tippy delay={0} content="Carrer" className="tippy">
+                <Link href="/journey" className="link-none">
                   <span className="icon">
                     <i className="fi fi-rr-hiking"></i>
                   </span>
@@ -42,55 +47,41 @@ const NavBar = () => {
               </Tippy>
             </li>
             <li
-              className={`${"list"} ${activeLink === 1 ? "active" : ""}`}
-              onClick={() => handleLinkClick(1)}
+              className={`${"list"} ${activeLink === "/home" ? "active" : ""}`}
+              onClick={() => handleLinkClick("/home")}
             >
               <Tippy delay={0} content="Home" className="tippy">
-                <Link href="/" className="link-none">
-                  <span
-                    className="icon"
-                    data-bs-toggle="tooltip"
-                    title="Home"
-                    data-bs-placement="bottom"
-                    data-bs-delay={0}
-                  >
+                <Link href="/home" className="link-none">
+                  <span className="icon" data-bs-toggle="tooltip">
                     <i className="fi fi-rr-home"></i>
                   </span>
                 </Link>
               </Tippy>
             </li>
             <li
-              className={`${"list"} ${activeLink === 2 ? "active" : ""}`}
-              onClick={() => handleLinkClick(2)}
+              className={`${"list"} ${
+                activeLink === "/projects" ? "active" : ""
+              }`}
+              onClick={() => handleLinkClick("/projects")}
             >
               <Tippy delay={0} content="Projects" className="tippy">
-                <Link href="/" className="link-none">
-                  <span
-                    className="icon"
-                    data-bs-toggle="tooltip"
-                    title="Projects"
-                    data-bs-placement="bottom"
-                    data-bs-delay={0}
-                  >
+                <Link href="/projects" className="link-none">
+                  <span className="icon" data-bs-toggle="tooltip">
                     <i className="fi fi-rr-books"></i>
                   </span>
                 </Link>
               </Tippy>
             </li>
             <li
-              className={`${"list"} ${activeLink === 3 ? "active" : ""}`}
-              onClick={() => handleLinkClick(3)}
+              className={`${"list"} ${
+                activeLink === "/contact" ? "active" : ""
+              }`}
+              onClick={() => handleLinkClick("/contact")}
             >
               <Tippy delay={0} content="Contact" className="tippy">
-                <Link href="/" className="link-none">
-                  <span
-                    className="icon"
-                    data-bs-toggle="tooltip"
-                    title="Contact Me"
-                    data-bs-placement="bottom"
-                    data-bs-delay={0}
-                  >
-                    <i className="fi fi-rr-envelope"></i>
+                <Link href="/contact" className="link-none">
+                  <span className="icon">
+                    <i className="fi fi-rr-address-book"></i>
                   </span>
                 </Link>
               </Tippy>

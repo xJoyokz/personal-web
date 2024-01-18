@@ -1,0 +1,79 @@
+.body-bg {
+  background-color: $primary;
+}
+
+.layout {
+  background-color: $primary;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1200px) {
+  .layout-content {
+    height: 88vh;
+    padding: 32px 100px;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .layout-content {
+    height: 90vh;
+    padding: 32px 100px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: 0px) {
+  .layout-navbar {
+    height: 75vh;
+    overflow: scroll;
+    padding: 32px 100px;
+    width: 100%;
+  }
+}
+
+.layout-navbar {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 0px) and (max-width: 425px) {
+  .image-logo {
+    top: 0;
+    left: 0;
+  }
+}
+@media screen and (min-width: 426px) {
+  .image-logo {
+    top: 25px;
+    left: 25px;
+  }
+}
+
+.image-logo {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: spin 4s linear infinite;
+  -moz-animation: spin 4s linear infinite;
+  animation: spin 4s linear infinite;
+}
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

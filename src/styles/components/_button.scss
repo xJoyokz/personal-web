@@ -1,0 +1,92 @@
+.btn-spin-content {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.btn-spin {
+  display: inline-block;
+  color: $secondary;
+  text-decoration: none;
+  padding: 1rem;
+  border: $secondary 1px solid;
+  border-radius: 50px;
+  opacity: 0;
+  animation-name: btn;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  transition-property: transform;
+  transition-duration: 1s;
+}
+
+.btn-spin:hover {
+  transform: rotateY(360deg);
+  color: $accent;
+  border: $accent 1px solid;
+}
+
+@keyframes btn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.btn-media-container {
+  animation-name: btn;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  transition-property: transform;
+  transition-duration: 1s;
+  display: grid;
+  height: 100%;
+  width: fit-content;
+  place-items: center;
+}
+
+.wrapper {
+  display: inline-flex;
+  align-items: end;
+  list-style: none;
+  height: fit-content;
+}
+
+.wrapper .icon {
+  color: $secondary;
+  opacity: 0;
+  border-radius: 50%;
+  margin: 10px;
+  font-size: 30px;
+  cursor: pointer;
+  animation-name: btn;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  transition-property: transform;
+  transition-duration: 1s;
+}
+
+.item-icon {
+  width: fit-content;
+  height: fit-content;
+}
+
+.wrapper .linked-in:hover {
+  color: #0077b5;
+}
+
+.wrapper .email:hover {
+  color: #ff0000;
+}
+
+.wrapper .instagram:hover {
+  color: #c13584;
+}
+
+.wrapper .github:hover {
+  color: #833ab4;
+}

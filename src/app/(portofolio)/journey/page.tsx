@@ -4,6 +4,6 @@ export const metadata: Metadata = {
   title: "xJoyokz-Home",
 };
 
-export default function Home() {
-  return <div>Test</div>;
+export default function Journey() {
+  return <div>test</div>;
 }

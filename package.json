@@ -9,11 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@flaticon/flaticon-uicons": "^3.1.0",
+    "@tippyjs/react": "^4.2.6",
     "bootstrap": "^5.3.2",
+    "ionicons": "^7.2.2",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",
-    "react-grid-gallery": "^1.0.1-alpha.0"
+    "react-image-grid-gallery": "^2.0.1",
+    "sass": "^1.69.7"
   },
   "devDependencies": {
     "@types/node": "^20",
