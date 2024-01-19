@@ -8,8 +8,10 @@ const Gallery = () => {
     switch (true) {
       case sizeScreen < 1000:
         return 200;
-      case sizeScreen >= 1000 && sizeScreen < 1600:
-        return 20;
+      case sizeScreen >= 1000 && sizeScreen < 1440:
+        return 230;
+      case sizeScreen >= 1440 && sizeScreen < 1600:
+        return 250;
       case sizeScreen >= 1600 && sizeScreen < 1800:
         return 400;
       case sizeScreen >= 1800 && sizeScreen < 1920:

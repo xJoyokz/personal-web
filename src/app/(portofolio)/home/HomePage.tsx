@@ -12,11 +12,7 @@ export default function HomePage() {
           <p className="home-heading">
             Hello! <br />I am <span className="home-name"> Jaya Wicaksana</span>
           </p>
-          <p>
-            I am a Front End Developer with over 2 years of experience. I love
-            the world of web development and am committed to creating visually
-            appealing and user-friendly interfaces.
-          </p>
+          <p>I am a Front End Developer with over 1 years of experience.</p>
           <div className="home-button">
             <ButtonSpin />
           </div>
