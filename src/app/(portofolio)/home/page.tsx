@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 export const metadata: Metadata = {
   title: "Home - xJoyokz",
 };
+
 const HomePage = dynamic(() => import("./HomePage"), {
   ssr: false,
 });
