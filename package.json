@@ -16,7 +16,7 @@
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",
-    "react-image-grid-gallery": "^2.0.1",
+    "react-grid-gallery": "^1.0.1-alpha.0",
     "sass": "^1.69.7"
   },
   "devDependencies": {

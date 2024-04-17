@@ -1,7 +1,7 @@
-import { ImageGallery } from "react-image-grid-gallery";
+import { Gallery } from "react-grid-gallery";
 import { imagesArray } from "./item";
 
-const Gallery = () => {
+const GalleryPage = () => {
   const sizeScreen = window.screen.width;
 
   const widthImage = () => {
@@ -24,12 +24,11 @@ const Gallery = () => {
   };
 
   return (
-    <ImageGallery
-      imagesInfoArray={imagesArray}
-      columnWidth={widthImage()}
-      gapSize={25}
+    <Gallery
+      images={imagesArray}
+      defaultContainerwidth={widthImage}
     />
   );
 };
 
-export default Gallery;
+export default GalleryPage;
